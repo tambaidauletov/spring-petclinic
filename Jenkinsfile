@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     echo "Building the Spring Petclinic project..."
-                    sh './mvnw clean package'
+                    bat './mvnw.cmd clean package'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     echo "Running tests and generating JaCoCo code coverage report..."
-                    sh './mvnw test jacoco:report'
+                    bat './mvnw.cmd test jacoco:report'
                 }
             }
         }
